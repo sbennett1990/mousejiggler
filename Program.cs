@@ -33,18 +33,16 @@ namespace ArkaneSystems.MouseJiggle
                 // Check for command-line switches.
                 foreach (string arg in args)
                 {
-                    if ((System.String.Compare(arg.ToUpperInvariant(), "--JIGGLE", System.StringComparison.Ordinal) ==
-                         0) ||
-                        (System.String.Compare(arg.ToUpperInvariant(), "-J", System.StringComparison.Ordinal) == 0))
+                    if ((string.Compare(arg, "--JIGGLE", ignoreCase: true) == 0)
+                        || (string.Compare(arg, "--J", ignoreCase: true) == 0))
                         StartJiggling = true;
 
-                    if ((System.String.Compare(arg.ToUpperInvariant(), "--ZEN", System.StringComparison.Ordinal) == 0) ||
-                        (System.String.Compare(arg.ToUpperInvariant(), "-Z", System.StringComparison.Ordinal) == 0))
+                    if ((string.Compare(arg, "--ZEN", ignoreCase: true) == 0)
+                        || (string.Compare(arg, "--Z", ignoreCase: true) == 0))
                         ZenJiggling = true;
 
-                    if ((System.String.Compare(arg.ToUpperInvariant(), "--MINIMIZED", System.StringComparison.Ordinal) ==
-                         0) ||
-                        (System.String.Compare(arg.ToUpperInvariant(), "-M", System.StringComparison.Ordinal) == 0))
+                    if ((string.Compare(arg, "--MINIMIZED", ignoreCase: true) == 0)
+                        || (string.Compare(arg, "--M", ignoreCase: true) == 0))
                         StartMinimized = true;
                 }
 
