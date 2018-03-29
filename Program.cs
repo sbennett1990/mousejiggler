@@ -15,24 +15,19 @@ using System;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace ArkaneSystems.MouseJiggle
-{
-    internal static class Program
-    {
+namespace ArkaneSystems.MouseJiggle {
+    internal static class Program {
         public static bool StartJiggling = false;
         public static bool ZenJiggling = false;
         public static bool StartMinimized = false;
 
         [STAThread]
-        private static void Main(string[] args)
-        {
+        private static void Main(string[] args) {
             Mutex instance = new Mutex(initiallyOwned: false, name: "single instance: ArkaneSystems.MouseJiggle");
 
-            if (instance.WaitOne(0, false))
-            {
+            if (instance.WaitOne(0, false)) {
                 // Check for command-line switches.
-                foreach (string arg in args)
-                {
+                foreach (string arg in args) {
                     if ((string.Compare(arg, "--JIGGLE", ignoreCase: true) == 0)
                         || (string.Compare(arg, "--J", ignoreCase: true) == 0))
                         StartJiggling = true;

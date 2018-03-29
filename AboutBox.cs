@@ -15,12 +15,9 @@ using System;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace ArkaneSystems.MouseJiggle
-{
-    partial class AboutBox : Form
-    {
-        public AboutBox()
-        {
+namespace ArkaneSystems.MouseJiggle {
+    partial class AboutBox : Form {
+        public AboutBox() {
             this.InitializeComponent();
 
             //  Initialize the AboutBox to display the product information from the assembly information.
@@ -37,16 +34,13 @@ namespace ArkaneSystems.MouseJiggle
 
         #region Assembly Attribute Accessors
 
-        public string AssemblyTitle
-        {
-            get
-            {
+        public string AssemblyTitle {
+            get {
                 // Get all Title attributes on this assembly
                 object[] attributes =
                     Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), inherit: false);
                 // If there is at least one Title attribute
-                if (attributes.Length > 0)
-                {
+                if (attributes.Length > 0) {
                     // Select the first one
                     var titleAttribute = (AssemblyTitleAttribute) attributes[0];
                     // If it is not an empty string, return it
@@ -58,18 +52,14 @@ namespace ArkaneSystems.MouseJiggle
             }
         }
 
-        public string AssemblyVersion
-        {
-            get
-            {
+        public string AssemblyVersion {
+            get {
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
 
-        public string AssemblyDescription
-        {
-            get
-            {
+        public string AssemblyDescription {
+            get {
                 // Get all Description attributes on this assembly
                 object[] attributes =
                     Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), inherit: false);
@@ -81,10 +71,8 @@ namespace ArkaneSystems.MouseJiggle
             }
         }
 
-        public string AssemblyProduct
-        {
-            get
-            {
+        public string AssemblyProduct {
+            get {
                 // Get all Product attributes on this assembly
                 object[] attributes =
                     Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), inherit: false);
@@ -96,10 +84,8 @@ namespace ArkaneSystems.MouseJiggle
             }
         }
 
-        public string AssemblyCopyright
-        {
-            get
-            {
+        public string AssemblyCopyright {
+            get {
                 // Get all Copyright attributes on this assembly
                 object[] attributes =
                     Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), inherit: false);
@@ -111,10 +97,8 @@ namespace ArkaneSystems.MouseJiggle
             }
         }
 
-        public string AssemblyCompany
-        {
-            get
-            {
+        public string AssemblyCompany {
+            get {
                 // Get all Company attributes on this assembly
                 object[] attributes =
                     Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), inherit: false);
@@ -128,8 +112,7 @@ namespace ArkaneSystems.MouseJiggle
 
         #endregion
 
-        private void okButton_Click(object sender, EventArgs e)
-        {
+        private void okButton_Click(object sender, EventArgs e) {
             this.Close();
         }
     }

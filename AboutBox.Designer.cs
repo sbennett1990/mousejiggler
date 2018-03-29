@@ -1,7 +1,5 @@
-namespace ArkaneSystems.MouseJiggle
-{
-    partial class AboutBox
-    {
+namespace ArkaneSystems.MouseJiggle {
+    partial class AboutBox {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,12 +9,9 @@ namespace ArkaneSystems.MouseJiggle
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
+        protected override void Dispose(bool disposing) {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
