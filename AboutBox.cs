@@ -24,9 +24,9 @@ namespace ArkaneSystems.MouseJiggle {
             //  Change assembly information settings for your application through either:
             //  - Project->Properties->Application->Assembly Information
             //  - AssemblyInfo.cs
-            this.Text = String.Format("About {0}", this.AssemblyTitle);
+            this.Text = $"About {this.AssemblyTitle}";
             this.labelProductName.Text = this.AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", this.AssemblyVersion);
+            this.labelVersion.Text = $"Version {this.AssemblyVersion}";
             this.labelCopyright.Text = this.AssemblyCopyright;
             this.labelCompanyName.Text = this.AssemblyCompany;
             this.textBoxDescription.Text = this.AssemblyDescription;
