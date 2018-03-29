@@ -17,13 +17,12 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
+    <FileUpgradeFlags></FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>\\arkane-systems.lan\Folders\home\avatar\My Dropbox\Apps\Azure\arkane-softwaredeployment\mousejiggler\</PublishUrl>
+    <PublishUrl></PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -33,7 +32,7 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://arkane-softwaredeployment.azurewebsites.net/mousejiggler/</InstallUrl>
+    <InstallUrl></InstallUrl>
     <SupportUrl>http://arkane.fogbugz.com/</SupportUrl>
     <ProductName>MouseJiggler</ProductName>
     <PublisherName>Arkane Systems</PublisherName>
