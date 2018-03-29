@@ -15,29 +15,23 @@ using System;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace ArkaneSystems.MouseJiggle
-{
-    public partial class MainForm : Form
-    {
+namespace ArkaneSystems.MouseJiggle {
+    public partial class MainForm : Form {
         private const int MOUSEMOVE = 8;
         protected bool zig = true;
 
-        public MainForm()
-        {
+        public MainForm() {
             this.InitializeComponent();
         }
 
-        private void jiggleTimer_Tick(object sender, EventArgs e)
-        {
+        private void jiggleTimer_Tick(object sender, EventArgs e) {
             // jiggle
             if (this.cbZenJiggle.Checked)
                 Jiggler.Jiggle(0, 0);
-            else
-            {
+            else {
                 if (this.zig)
                     Jiggler.Jiggle(4, 4);
-                else
-                {
+                else {
                     // I really don't know why this needs to be less to stay in the same
                     // place; if I was likely to use it again, then I'd worry.
                     Jiggler.Jiggle(-4, -4);
@@ -47,21 +41,17 @@ namespace ArkaneSystems.MouseJiggle
             this.zig = !this.zig;
         }
 
-        private void cbEnabled_CheckedChanged(object sender, EventArgs e)
-        {
+        private void cbEnabled_CheckedChanged(object sender, EventArgs e) {
             this.jiggleTimer.Enabled = this.cbEnabled.Checked;
         }
 
-        private void cmdAbout_Click(object sender, EventArgs e)
-        {
+        private void cmdAbout_Click(object sender, EventArgs e) {
             using (var a = new AboutBox())
                 a.ShowDialog();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            try
-            {
+        private void MainForm_Load(object sender, EventArgs e) {
+            try {
                 RegistryKey key = Registry.CurrentUser.CreateSubKey(@"Software\Arkane Systems\MouseJiggle",
                                                                     RegistryKeyPermissionCheck.ReadWriteSubTree);
                 var zen = (int) key.GetValue("ZenJiggleEnabled", 0);
@@ -71,8 +61,7 @@ namespace ArkaneSystems.MouseJiggle
                 else
                     this.cbZenJiggle.Checked = true;
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 // Ignore any problems - non-critical operation.
             }
 
@@ -86,10 +75,8 @@ namespace ArkaneSystems.MouseJiggle
                 this.cmdToTray_Click(this, null);
         }
 
-        private void cbZenJiggle_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        private void cbZenJiggle_CheckedChanged(object sender, EventArgs e) {
+            try {
                 RegistryKey key = Registry.CurrentUser.CreateSubKey(@"Software\Arkane Systems\MouseJiggle",
                                                                     RegistryKeyPermissionCheck.ReadWriteSubTree);
                 if (this.cbZenJiggle.Checked)
@@ -97,14 +84,12 @@ namespace ArkaneSystems.MouseJiggle
                 else
                     key.SetValue("ZenJiggleEnabled", 0);
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 // Ignore any problems - non-critical operation.
             }
         }
 
-        private void cmdToTray_Click(object sender, EventArgs e)
-        {
+        private void cmdToTray_Click(object sender, EventArgs e) {
             // minimize to tray
             this.Visible = false;
 
@@ -115,8 +100,7 @@ namespace ArkaneSystems.MouseJiggle
             this.nifMin.Visible = true;
         }
 
-        private void nifMin_DoubleClick(object sender, EventArgs e)
-        {
+        private void nifMin_DoubleClick(object sender, EventArgs e) {
             // restore the window
             this.Visible = true;
 

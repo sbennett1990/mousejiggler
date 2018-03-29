@@ -15,20 +15,16 @@ using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-namespace ArkaneSystems.MouseJiggle
-{
-    public static class Jiggler
-    {
+namespace ArkaneSystems.MouseJiggle {
+    public static class Jiggler {
         internal const int INPUT_MOUSE = 0;
         internal const int MOUSEEVENTF_MOVE = 0x0001;
 
         [DllImport("user32.dll", SetLastError = true)]
         private static extern uint SendInput(uint nInputs, ref INPUT pInputs, int cbSize);
 
-        public static void Jiggle(int dx, int dy)
-        {
-            var inp = new INPUT
-            {
+        public static void Jiggle(int dx, int dy) {
+            var inp = new INPUT {
                 TYPE = Jiggler.INPUT_MOUSE,
                 dx = dx,
                 dy = dy,
@@ -45,8 +41,7 @@ namespace ArkaneSystems.MouseJiggle
 
     /* This is a kludge, presetting all this, but WTF. It works.
      * And for a program this trivial, who's bothered? */
-    internal struct INPUT
-    {
+    internal struct INPUT {
         public int TYPE;
         public int dx;
         public int dy;
