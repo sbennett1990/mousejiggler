@@ -1,7 +1,5 @@
-namespace ArkaneSystems.MouseJiggle
-{
-    partial class MainForm
-    {
+namespace ArkaneSystems.MouseJiggle {
+    partial class MainForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,12 +9,9 @@ namespace ArkaneSystems.MouseJiggle
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
+        protected override void Dispose(bool disposing) {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
@@ -37,14 +32,14 @@ namespace ArkaneSystems.MouseJiggle
             this.cmdToTray = new System.Windows.Forms.Button();
             this.nifMin = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
-            // 
+            //
             // jiggleTimer
-            // 
+            //
             this.jiggleTimer.Interval = 1000;
             this.jiggleTimer.Tick += new System.EventHandler(this.jiggleTimer_Tick);
-            // 
+            //
             // cbEnabled
-            // 
+            //
             this.cbEnabled.AutoSize = true;
             this.cbEnabled.Location = new System.Drawing.Point(13, 13);
             this.cbEnabled.Name = "cbEnabled";
@@ -53,9 +48,9 @@ namespace ArkaneSystems.MouseJiggle
             this.cbEnabled.Text = "Enable jiggle?";
             this.cbEnabled.UseVisualStyleBackColor = true;
             this.cbEnabled.CheckedChanged += new System.EventHandler(this.cbEnabled_CheckedChanged);
-            // 
+            //
             // cmdAbout
-            // 
+            //
             this.cmdAbout.Location = new System.Drawing.Point(111, 7);
             this.cmdAbout.Name = "cmdAbout";
             this.cmdAbout.Size = new System.Drawing.Size(33, 23);
@@ -63,9 +58,9 @@ namespace ArkaneSystems.MouseJiggle
             this.cmdAbout.Text = "?";
             this.cmdAbout.UseVisualStyleBackColor = true;
             this.cmdAbout.Click += new System.EventHandler(this.cmdAbout_Click);
-            // 
+            //
             // cbZenJiggle
-            // 
+            //
             this.cbZenJiggle.AutoSize = true;
             this.cbZenJiggle.Location = new System.Drawing.Point(25, 36);
             this.cbZenJiggle.Name = "cbZenJiggle";
@@ -74,9 +69,9 @@ namespace ArkaneSystems.MouseJiggle
             this.cbZenJiggle.Text = "Zen jiggle?";
             this.cbZenJiggle.UseVisualStyleBackColor = true;
             this.cbZenJiggle.CheckedChanged += new System.EventHandler(this.cbZenJiggle_CheckedChanged);
-            // 
+            //
             // cmdToTray
-            // 
+            //
             this.cmdToTray.Image = ((System.Drawing.Image)(resources.GetObject("cmdToTray.Image")));
             this.cmdToTray.Location = new System.Drawing.Point(111, 32);
             this.cmdToTray.Name = "cmdToTray";
@@ -84,15 +79,15 @@ namespace ArkaneSystems.MouseJiggle
             this.cmdToTray.TabIndex = 3;
             this.cmdToTray.UseVisualStyleBackColor = true;
             this.cmdToTray.Click += new System.EventHandler(this.cmdToTray_Click);
-            // 
+            //
             // nifMin
-            // 
+            //
             this.nifMin.Icon = ((System.Drawing.Icon)(resources.GetObject("nifMin.Icon")));
             this.nifMin.Text = "Mouse Jiggler";
             this.nifMin.DoubleClick += new System.EventHandler(this.nifMin_DoubleClick);
-            // 
+            //
             // MainForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(156, 59);
@@ -122,4 +117,3 @@ namespace ArkaneSystems.MouseJiggle
         private System.Windows.Forms.NotifyIcon nifMin;
     }
 }
-
