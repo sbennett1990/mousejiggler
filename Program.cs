@@ -17,9 +17,9 @@ using System.Windows.Forms;
 
 namespace ArkaneSystems.MouseJiggle {
     internal static class Program {
-        public static bool StartJiggling = false;
-        public static bool ZenJiggling = false;
-        public static bool StartMinimized = false;
+        public static bool StartJiggling { get; private set; } = false;
+        public static bool ZenJiggling { get; private set; } = false;
+        public static bool StartMinimized { get; private set; } = false;
 
         [STAThread]
         private static void Main(string[] args) {
