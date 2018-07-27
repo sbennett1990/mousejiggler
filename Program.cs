@@ -25,7 +25,7 @@ namespace ArkaneSystems.MouseJiggle {
         private static void Main(string[] args) {
             Mutex instance = new Mutex(initiallyOwned: false, name: "single instance: ArkaneSystems.MouseJiggle");
 
-            if (instance.WaitOne(0, false)) {
+            if (instance.WaitOne(0, exitContext: false)) {
                 // Check for command-line switches.
                 foreach (string arg in args) {
                     if ((string.Compare(arg, "--JIGGLE", ignoreCase: true) == 0)
@@ -42,7 +42,7 @@ namespace ArkaneSystems.MouseJiggle {
                 }
 
                 Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
+                Application.SetCompatibleTextRenderingDefault(defaultValue: false);
                 Application.Run(new MainForm());
             }
 
